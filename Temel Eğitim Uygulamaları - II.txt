@@ -1,0 +1,49 @@
+namespace TemelEgitim
+{
+   internal class program
+   {
+     static void Main(string[] args)
+     {
+         /*
+         * İlkel (Primitif) Veri Tİpleri: 
+         * - Öyle gözükmeseler bile sayısal temellidirler.
+         * - Tüm yazılım dillerinde bulunurlar.   
+         */
+         // Tam Sayı Tipleri:
+         byte bayt = 255; // Kapladığı alan 8bit (1byte) 0 ~ 255 arası değer alır.
+         sbyte sbayt = 127; // İşaretlidir. -128 ~ 127 arası değer alır.
+
+         short kisa = 32767; // İşaretlidir. 16bit (2byte) -2^15 ~ 2^15-1
+         ushort ukisa = 65535; // İşaretsizdir. 0 ~ 2^16-1
+
+         // int: En genel kullanılan tam sayıdır. (Bilgi: tckimlik, cep telefonu gibi sayılar bu yapıya büyük 
+gelecektir.)
+         int tam = 32767; // İşaretlidir, 32bit (4byte) -2^31 ~ 2^31-1
+         uint utam = 65535; // İşaretsizdir. 0 ~ 2^32-1
+
+         // long: Bu yapı için sonuna L harfi getirilerek belirtilebilir. Yoksa int değer olarak yazılır, fazlasına hata 
+verebilir. 
+         long uzun = 32767L; // İşaretlidir. 64bit (8byte) -2^63 ~ 2^63-1
+         ulong uuzun = 65535L; // İşaretsizdir. 0  ~ 2^64-1
+
+         // Floating Point: Her ne kadar ondalık değerler için kullanılsa da kayan nokta sayılar olarak bilinirler.
+         float tek = 1.7e38F; // 32bit (4byte) sonuna 'F' karakteri gelmek zorundadır.
+         double cift = 1.7e308; // 64bit (8byte)
+
+         // Karakter Veri Tipi: True(1) / False(0) değerlerinden birini alır. 1byte yer kaplar. Karar mekanizmalarının 
+temelidir.
+         bool mantik = true;
+
+         // Temel Referans Tipleri: Altyapı sağlayıcı(microsoft) tarafından ilkel tipleri kullanılarak üretilmiş geniş
+özellikleri bulunan object temelli veri tipleridir.
+
+         string karakter_katari = "Ad-Soyad"; // Çift tırnaklar arasına yazılan her karakterin boyutunu toplayarak oluşan,
+karakter dizileridir. <karakter sayısı>*2byte
+
+         decimal ondalik = 15.456M; // Genellikle finansal veri tipi olarak kullanılır, tutarlı ondalık yapı oluşturur. 
+128byte yer kaplar.
+     }
+
+   }
+
+}

@@ -1,0 +1,132 @@
+using sytem;
+
+namespace TemelEgitim
+ {
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            /*
+            * Operatörler: Operant değerlerle birlikte bir sonuç üretmek için kullanılan yapılardır.
+            */
+            // Atama Operatörü (=):
+            // <Veri Tipi> <Operant Adı> = <Veri Tipinde Değer>
+            int sayi1 = 15;
+            double sayi2 = 17;
+            // Sağ taraf sol tarafa aktarılır, sağ tarafın veri tipi sınırı sol tarafınkinden küçük veya eşit olmalıdır.
+double int değişkene aktarılamaz, int double'a aktarılır.
+            sayi2 = sayi1;
+            double sayi3 = 18;
+
+            string isim = "Ad-Soyad";
+            char karakter = 'E';
+            // İlkel tip referans tipine aktarılamaz.
+            // isim = karakter;
+ 
+            // Aritmetik Operatörler (+, -, /, *, %): Bu işlemlerde operantlardan  veri tipi en geniş olanın tipinde
+cevap döndürülür.
+            double cevap1 = 0;
+            cevap1 = sayi1 + sayi3;
+
+            // Tam sayıya atama sırasında ondalıklı sonuçlar gözmezden gelinir, sadece tam kısımlar alınır. Operantlar 
+tam sayı ise atama yapılmadan önce sadece tam kısım alınır, sol tarafın tipi önemsiz kalır.
+            double cevap2 = 9 / 5;
+           
+            // Aritmetik Kumülatif Atama Operatörleri ( +=, -=, *=, /=, %, ++, --):
+            double sayi4 = 4;
+            Console.Write("Sayı: ");
+            Console.WriteLine(sayi4);
+
+            sayi4 += 7; //sayi4 = sayi4 + 7
+            Console.Write("+= 7: ");
+            Console.WriteLine(sayi4);
+
+            sayi4 /= 2; //sayi4 = sayi4 / 2
+            Console.Write("/= 2: ");
+            Console.WriteLine(sayi4);
+
+            sayi4 -= 1; //sayi4 = sayi4 - 1
+            Console.Write("-= 1: ");
+            Console.WriteLine(sayi4);
+
+            sayi4 *= 11; //sayi4 = sayi4 * 11
+            Console.Write("*= 11: ");
+            Console.WriteLine(sayi4);
+
+            sayi4 %= 7; //sayi4 = sayi4 % 7
+            Console.Write("%= 7: ");
+            Console.WriteLine(sayi4);
+
+            sayi4++;//sayi4 = sayi4 + 1
+            Console.Write("++: ");
+            Console.WriteLine(sayi4);
+
+            sayi4--;//sayi4 = sayi4 - 1
+            Console.Write("--: ");
+            Console.WriteLine(sayi4);
+
+            Console.WriteLine();   
+
+
+            //Karşılaştırma Operatörleri (<,>,<=,>=,==,!=): Bu operasyonlar sonuçta mantıksal (bool) veri tipi döner.
+
+            Console.WriteLine("Sayılar: " + sayi1 + ", " + sayi3);
+            Console.WriteLine("Küçük müdür?: " + (sayi1 < sayi3));
+            Console.WriteLine("Büyük müdür?: " + (sayi1 > sayi3));
+            Console.WriteLine("Eşit midir?: " + (sayi1 == sayi3));
+            Console.WriteLine("Eşit değil midir?: " + (sayi1 != sayi3));
+            Console.WriteLine("Küçük veya eşit midir?: " + (sayi1 <= sayi3));
+            Console.WriteLine("Büyük veya eşit midir?: " + (sayi1 >= sayi3));
+
+            //Mantıksal Operatörler (AND &&, OR ||, NOT !): 
+            bool mantik1 = true;
+            bool mantik2 = false;
+
+            //AND (&&): Matematikteki çarpmaya eş değerdir, operasyona giren mantıksal değerlerin bir biriyle VE 
+işlemine tabi tutulması olayıdır. Bütün değerlerin True olması beklenir, False yutan elemandır.
+            /*
+             * TRUE && TRUE => TRUE
+             * TRUE && FALSE => FALSE
+             * FALSE && TRUE => FALSE
+             * FALSE && FALSE => FALSE
+             */
+            Console.WriteLine("AND (&&): " + mantik1 + " && " + mantik2 + " = " + (mantik1 && mantik2));
+
+            //OR (||): Matematikteki toplamaya eş değerdir, operasyona giren mantıksal değerlerin bir biriyle
+ VEYa işlemine tabi tutulması olayıdır. Her hangi bir değerin True olması beklenir, False etkisiz elemandır.
+            /*
+             * TRUE || TRUE => TRUE
+             * TRUE || FALSE => TRUE
+             * FALSE || TRUE => TRUE
+             * FALSE || FALSE => FALSE
+             */
+            Console.WriteLine("OR (||): " + mantik1 + " || " + mantik2 + " = " + (mantik1 || mantik2));
+
+            //NOT (!): Önüne geldiği mantıksal ifadeyi tersler. 
+            /*
+             * !FALSE => TRUE
+             * !TRUE => FALSE
+             */
+            Console.WriteLine("NOT (!): !" + mantik1 + " = " + !mantik1);
+            Console.WriteLine("NOT (!): !" + mantik2 + " = " + !mantik2);
+
+            //Mantıksal Kumülatif Atama Operatörleri (&=,|=):
+            bool mantik3 = false;
+            mantik3 |= true; Console.WriteLine(mantik3); //true
+            mantik3 &= true; Console.WriteLine(mantik3); //true
+            mantik3 &= false; Console.WriteLine(mantik3); //false
+            mantik3 |= false; Console.WriteLine(mantik3); //false
+            mantik3 &= true; Console.WriteLine(mantik3); //false
+            mantik3 |= true; Console.WriteLine(mantik3); //true
+
+            //Ternary Operatör (?:):<değişken> = <Mantıksal İfade>?<İfade True ise atanacak değer>:
+<İfade False ise atanacak değer>
+
+            double en_buyuk = sayi1 > sayi4 ? sayi1 : sayi4;
+            string sonuc = mantik3 ? "Form onaylandı!" : "Eksiklikler var!!!";
+            Console.WriteLine(sonuc);
+
+            Console.ReadKey();
+        }
+    }
+}

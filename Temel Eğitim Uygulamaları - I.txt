@@ -1,0 +1,76 @@
+//Tek satırlık yorum satırı oluşturuldu (comment) oluşturuldu.
+/*
+* Çok satırlı yorum/açıklama oluşturulduö
+* Ctrl + S : Bulunduğumuz dosyayı kaydeder.
+* Ctrl + Shift + S: Açık bütün dosyaları kaydeder.
+* Ctrl + K,C: Bulunduğunuz satırı yorum satırına alır.
+* Ctrl + K,U: Bulunduğunuz satırı yorum satırından çıkarır.
+* Ctrl + K,D: Kod düzenini formatlar, parantezleri hizalar.
+* Ctrl + E,W: Tüm içeriği ekrana sığdırma veya geri alma işlemini yapar.
+* Ctrl + D: Bulunduğu satırı kopyalar.
+*/
+
+//namespace: Program dosyalarını (.cs) bir isim altında toplamak için kullanılır. Bu ismi alan dosyalar birbirini direk
+görebilir. İçerisine yazılan nesnelerin adres belirteci olarak kullanılır. Script (oyun vb) programcılığında dosyalar 
+arası iletişim olmadığından kullanıldığı görünmez.
+
+{
+
+//Nesne (object): En genel program parçalarından en küçüğüne kadar temelinde object adı verilen yapı (struct) 
+bulunmaktadır. Ortak olarak her nesnede bu yapının özelliklerini görürüz.
+
+/*
+* class (sınıf): Classification (sınıflandırma) olarak kullanılır. Özellikler ve işlevler barındırarak veri değişikliğine
+bağımlı şekillenen nesneler oluşturur. En sık kullanılan nesne türüdür. 
+ 
+* enum (enumurate): Numaralandırma nesnesidir, sınıflar için manifesto görevi görür. Sınıfları özelliklerini kısıtlamak 
+için kullanılır.   
+*/
+
+
+/// <summary>
+/// Program.cs genel anlamda c# projelerinin başlangıç noktasıdır. Bu özet yazı bunu belirtmek için yazılmıştır. Main() 
+metodunu kullanarak temel kodlarınıza başlayabilirsiniz.
+/// Bu yapı nesnelere ve onların içerisindeki özelliklere eklenebilir.
+/// </summary>
+internal class program
+{
+     /// <summary>
+     /// Bu metot başlangıç noktasını belli eder, içerisine akışınızı yazarak uygulamanıza başlayabilirsiniz.
+     /// </summary> 
+     /// <param name = "args"> Bu alan dışarıdan gelecek bilgi akışı içindir. Parametre alanı olarak bilinir.
+</param> 
+     static void main (string[] args)
+     {
+     }
+}
+
+enum Gunler { Pazar, Pazartesi, Salı, Çarşamba, Perşembe, Cuma, Cumartesi}
+}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
